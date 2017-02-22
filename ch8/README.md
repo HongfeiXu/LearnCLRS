@@ -33,3 +33,19 @@ for j = A.length downto 1
 ###C++实现
 
 [CountingSort.cpp](https://github.com/HongfeiXu/LearnCLRS/blob/master/ch8/CountingSort.cpp)
+
+##8.3 基数排序
+
+基数排序是先按最低有效位进行排序来解决卡片排序问题的。
+为了确保基数排序的正确性，一位数排序算法必须是稳定的。
+
+###Pseudocode
+```
+RADIX-SORT(A, d)
+for i = 1 to d
+	use a stable sort to sort array A on digit i
+```
+
+###C++实现
+基于稳定的排序算法 CountingSort 实现。
+[RadixSort.cpp]()
