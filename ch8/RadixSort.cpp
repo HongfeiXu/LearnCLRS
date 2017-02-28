@@ -48,6 +48,7 @@ inline int mapChar2Num(char c)
 	return static_cast<int>(c) - static_cast<int>('A');
 }
 
+// 待排序的 words，每个单词的位数 d，排序后的输出 result
 void radixSort(const vector<string> &words, const int d, vector<string> &result)
 {
 	const int k = 25;  // 字母对应数字的范围 0 ~ 25
