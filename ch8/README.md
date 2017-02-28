@@ -76,7 +76,7 @@ for i = 0 to n-1
 
 ### C++实现
 
-基于链表和插入排序的桶排序实现
+基于链表和插入排序的桶排序实现  
 [BucketSort.cpp](https://github.com/HongfeiXu/LearnCLRS/blob/master/ch8/BucketSort.cpp)
 
 
