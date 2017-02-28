@@ -87,7 +87,6 @@ int main()
 		cout << item << " ";
 	cout << endl;
 
-
 	const int d = 3;  // 3 位元素 对应每个字符串中字符下标 0 1 2（位字母的最低位）
 
 	vector<string> result(words.size());
