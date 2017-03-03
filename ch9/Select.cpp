@@ -1,5 +1,9 @@
 /*
-
+1. 将输入数组的 n 个元素划分为 floor(n/5) 组，每组 5 个元素，且至多只有一组由剩下的 n mod 5 个元素组成。
+2. 寻找着 ceil(n/5) 组中每一组的中位数。（首先对每组元素进行插入排序，然后确定每组有序元素中的中位数。）
+3. 对第 2 步中找出的 ceil(n/5) 个中位数，递归调用 SELECT 以找出其中位数 x（如果有偶数个中位数，为了方便，约定 x 是较小的中位数）。
+4. 利用修改过的 PARTITION 版本，按中位数的中位数 x 对输入数组进行划分。让 k 比划分的低区中的元素数目多1，因此 x 是第 k 小的元素，并且有 n - k 个元素在划分的高区。
+5. 如果 i == k，则返回 x。如果 i < k，则在低区递归调用 SELECT 来找出第 i 小的元素。如果 i > k，则在高区递归查找第 i - k 小的元素。
 */
 #include <iostream>
 #include <random>
@@ -96,7 +100,6 @@ int Select(vector<int> &A, int p, int r, int i)
 	int pivot;
 	pivot = Select(median, 0, median.size() - 1, ceil(static_cast<double>(median.size())) / static_cast<double>(2));  // 递归调用 Select 寻找中位数的中位数
 
-
 	int q = Partition(A, p, r, pivot);
 	
 	cout << "after partition:\n";
@@ -113,7 +116,6 @@ int Select(vector<int> &A, int p, int r, int i)
 		return Select(A, q + 1, r, i - k);
 }
 
-
 // test
 int main()
 {
@@ -126,9 +128,6 @@ int main()
 
 	int min5 = Select(A, 0, ARRAYSIZE-1, 5);
 	cout << "min5 = " << min5 << endl;
-
-	//min5 = RandomizedSelect(A, 0, ARRAYSIZE - 1, 5);
-	//cout << "min5 = " << min5 << endl;
 
 	return 0;
 }
