@@ -5,6 +5,7 @@ using namespace std;
 
 const int ARRAYSIZE = 20;
 
+
 int Partition(int A[], int p, int r)
 {
 	cout << "Partition with " << A[r] << " : \n";
