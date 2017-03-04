@@ -61,4 +61,4 @@ return x
 
 **C++й╣ож**
 
-[Stack_Queue]()
+[Stack_Queue](https://github.com/HongfeiXu/LearnCLRS/blob/master/ch10/Stack_Queue.h)
