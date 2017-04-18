@@ -1,12 +1,34 @@
 #include <iostream>
 #include <string>
+#include <vector>
+
+#include "myUtility.h"  // RandomizeInPlace()
 #include "BSTree.h"
+
+// жиди typename BSTree<int, std::string>::BSTNode * ЕФ << 
+std::ostream & operator<< (std::ostream &os, const typename BSTree<int, std::string>::BSTNode * pNode)
+{
+	os << pNode->key << " " << pNode->value;
+	return os;
+}
 
 int main()
 {
 	BSTree<int, std::string> bstree;
-	typename BSTree<int, std::string>::BSTNode arr[] = { {3, "Hello"}, {1, "World"}, {8, "WOW"}, {2, "Tree"}, {6, "Binary"}, {7, "Search"}, {5, "Node"} };
-	for (auto &item : arr)
+	std::vector<typename BSTree<int, std::string>::BSTNode *> ptr_vec(7);
+	ptr_vec[0] = new BSTree<int, std::string>::BSTNode(3, "Hello");
+	ptr_vec[1] = new BSTree<int, std::string>::BSTNode(1, "World");
+	ptr_vec[2] = new BSTree<int, std::string>::BSTNode(8, "WOW");
+	ptr_vec[3] = new BSTree<int, std::string>::BSTNode(2, "Tree");
+	ptr_vec[4] = new BSTree<int, std::string>::BSTNode(6, "Binary");
+	ptr_vec[5] = new BSTree<int, std::string>::BSTNode(7, "Search");
+	ptr_vec[6] = new BSTree<int, std::string>::BSTNode(5, "Node");
+
+	OutputVec(ptr_vec, std::cout, ' ');
+	RandomizeInPlace(ptr_vec);
+	OutputVec(ptr_vec, std::cout, ' ');
+
+	for (auto &item : ptr_vec)
 	{
 		bstree.insert(item);
 	}
@@ -43,36 +65,9 @@ int main()
 		std::cout << "The predecessor of 3 is " << pred_node->key << std::endl;
 	}
 
+	bstree.deleteNodeHasKey(8);
+	bstree.inorderTreeWalk(std::cout);
+	std::cout << "Height of the tree: "<<bstree.treeHeight() << std::endl;
+
 	return 0;
 }
-
-
-/*
-
-1 World
-2 Tree
-3 Hello
-5 Node
-6 Binary
-7 Search
-8 WOW
-
-2 Tree
-1 World
-5 Node
-7 Search
-6 Binary
-8 WOW
-3 Hello
-
-6 founded
-7 founded
-The minimum elem in the tree:
-1
-The maximum elem in the tree:
-8
-The successor of 3 is 5
-The predecessor of 3 is 1
-Press any key to continue . . .
-
-*/
