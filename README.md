@@ -1,2 +1,2 @@
 # LearnCLRS
-Backup my code while reading Introduciont to Algorithms Third Editioin.
+Backup my code while reading Introduction to Algorithms Third Editioin.
