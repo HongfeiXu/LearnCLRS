@@ -1,3 +1,11 @@
+/***************************************************************************
+*  @file       myUtility.h
+*  @author     Alex.Xu
+*  @mail       icevmj@gmail.com
+*  @date       4.19 2016
+*  @remark     Implementations for algorithims from CLRS using C++ templates.
+***************************************************************************/
+
 #ifndef MY_UTILITY_H
 #define MY_UTILITY_H
 

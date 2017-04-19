@@ -1,3 +1,12 @@
+/***************************************************************************
+*  @file       BSTree.h
+*  @author     Alex.Xu
+*  @mail       icevmj@gmail.com
+*  @date       4.19 2016
+*  @remark     Implementations for algorithims from CLRS using C++ templates.
+***************************************************************************/
+
+
 #ifndef BSTREE_H
 #define BSTREE_H
 
@@ -102,14 +111,9 @@ inline void BSTree<KeyType, ValueType>::insertAuxRecu(BSTNode* &sub_root, BSTNod
 	{
 		insertAuxRecu(sub_root->lchild, sub_root, p_node);
 	}
-	else if(p_node->key > sub_root->key)
-	{
-		insertAuxRecu(sub_root->rchild, sub_root, p_node);
-	}
 	else
 	{
-		std::cerr << "data " << p_node->key << " already in the bstree" << std::endl;
-		exit(EXIT_FAILURE);
+		insertAuxRecu(sub_root->rchild, sub_root, p_node);
 	}
 }
 
@@ -125,14 +129,9 @@ inline void BSTree<KeyType, ValueType>::insertAuxIter(BSTNode* &sub_root, BSTNod
 		{
 			temp = temp->lchild;
 		}
-		else if(p_node->key > temp->key)
-		{
-			temp = temp->rchild;
-		}
 		else
 		{
-			std::cerr << "data " << p_node->key << " already in the bstree" << std::endl;
-			exit(EXIT_FAILURE);
+			temp = temp->rchild;
 		}
 	}
 
@@ -146,7 +145,7 @@ inline void BSTree<KeyType, ValueType>::insertAuxIter(BSTNode* &sub_root, BSTNod
 	{
 		pparent_node->lchild = p_node;
 	}
-	else if (p_node->key > pparent_node->key)
+	else
 	{
 		pparent_node->rchild = p_node;
 	}
