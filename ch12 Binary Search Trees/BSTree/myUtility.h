@@ -4,6 +4,7 @@
 *  @mail       icevmj@gmail.com
 *  @date       4.19 2016
 *  @remark     Implementations for algorithims from CLRS using C++ templates.
+*  @platform   visual studio 2013, windows 10
 ***************************************************************************/
 
 #ifndef MY_UTILITY_H

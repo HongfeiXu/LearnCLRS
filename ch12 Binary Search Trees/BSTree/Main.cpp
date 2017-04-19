@@ -5,6 +5,7 @@
 *  @date       4.19 2016
 *  @remark     Test the functionality
 *  @platform   visual studio 2013, windows 10
+*  @platform   visual studio 2013, windows 10
 ***************************************************************************/
 
 #include "BSTree.h"
