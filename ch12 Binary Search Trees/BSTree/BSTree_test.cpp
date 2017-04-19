@@ -1,9 +1,10 @@
 /***************************************************************************
-*  @file       Test.h
+*  @file       BStree_test.cpp
 *  @author     Alex.Xu
 *  @mail       icevmj@gmail.com
 *  @date       4.19 2016
 *  @remark     Test the functionality of BSTree template
+*  @platform   visual studio 2013, windows 10
 ***************************************************************************/
 
 #include <iostream>
@@ -14,19 +15,21 @@
 #include "myUtility.h"  // RandomizeInPlace()
 #include "BSTree.h"
 
+using ch12::BSTree;
+
 // overload operator<<, so we can use OutputVec to print the infomation of *pNode
-std::ostream & operator<< (std::ostream &os, const typename BSTree<int, std::string>::BSTNode * pNode)
+std::ostream& ch12::operator<< (std::ostream &os, const BSTree<int, std::string>::BSTNode * pNode)
 {
 	os << pNode->key << " " << pNode->value;
 	return os;
 }
 
-int main()
+void ch12::BSTree_test()
 {
 	std::srand(unsigned(time(0)));
 
 	BSTree<int, std::string> bstree;
-	std::vector<typename BSTree<int, std::string>::BSTNode *> ptr_vec(8);
+	std::vector<BSTree<int, std::string>::BSTNode *> ptr_vec(8);
 	ptr_vec[0] = new BSTree<int, std::string>::BSTNode(3, "Hello");
 	ptr_vec[1] = new BSTree<int, std::string>::BSTNode(1, "World");
 	ptr_vec[2] = new BSTree<int, std::string>::BSTNode(8, "WOW");
@@ -76,9 +79,7 @@ int main()
 	bstree.deleteNodeHasKey(8);
 	std::cout << "inorderTreeWalk:" << std::endl;
 	bstree.inorderTreeWalk(std::cout);
-	std::cout << "Height of the tree: "<<bstree.treeHeight() << std::endl;
-
-	return 0;
+	std::cout << "Height of the tree: " << bstree.treeHeight() << std::endl;
 }
 
 /*

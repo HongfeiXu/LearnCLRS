@@ -6,11 +6,16 @@
 *  @remark     Implementations for algorithims from CLRS using C++ templates.
 ***************************************************************************/
 
-
 #ifndef BSTREE_H
 #define BSTREE_H
 
 #include <iostream>
+
+namespace ch12
+{
+
+//////////////////////////////////////////////////////////////////////////
+// Templates for Node and BSTree
 
 template <typename KeyType, typename ValueType>
 class Node {
@@ -24,7 +29,7 @@ public:
 	Node* parent;
 	KeyType key;
 	ValueType value;
-};
+};  // Template Class Node
 
 template <typename KeyType, typename ValueType>
 class BSTree {
@@ -79,7 +84,15 @@ private:
 
 private:
 	BSTNode* root;
-};
+};  // Template Class BSTree
+
+//////////////////////////////////////////////////////////////////////////
+// function decleration for BSTree_test, see BSTree_test.cpp
+std::ostream & operator<< (std::ostream &os, const BSTree<int, std::string>::BSTNode * pNode);
+void BSTree_test();
+
+//////////////////////////////////////////////////////////////////////////
+// Template class member methods
 
 template <typename KeyType, typename ValueType>
 inline typename BSTree<KeyType, ValueType>::BSTNode* BSTree<KeyType, ValueType>::search(const KeyType &key) const
@@ -318,6 +331,8 @@ inline void BSTree<KeyType, ValueType>::transplant(BSTNode *lhs_subtree, BSTNode
 	if (rhs_subtree != nullptr)
 		rhs_subtree->parent = lhs_subtree->parent;
 }
+
+}  // //namespace ch12
 
 #endif // !BSTREE_H
 
