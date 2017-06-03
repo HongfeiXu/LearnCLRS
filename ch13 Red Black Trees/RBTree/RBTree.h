@@ -2,7 +2,7 @@
 *  @file       RBTree.h
 *  @author     Alex.Xu
 *  @mail       icevmj@gmail.com
-*  @date       6.2 2016
+*  @date       6.2 2017
 *  @remark     Implementations for algorithims from CLRS using C++ templates.
 *  @platform   visual studio 2013, windows 10
 ***************************************************************************/
