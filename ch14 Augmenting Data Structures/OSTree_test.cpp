@@ -3,7 +3,7 @@
 *  @author     Alex.Xu
 *  @mail       icevmj@gmail.com
 *  @date       7.5 2017
-*  @remark     Test the functionality of RBTree template
+*  @remark     Test the functionality of OSTree template
 *  @platform   visual studio 2013, windows 10
 ***************************************************************************/
 

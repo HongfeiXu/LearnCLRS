@@ -1,9 +1,9 @@
 /***************************************************************************
-*  @file       RBtree_test.cpp
+*  @file       IntervalTree_test.cpp
 *  @author     Alex.Xu
 *  @mail       icevmj@gmail.com
 *  @date       7.6 2017
-*  @remark     Test the functionality of RBTree template
+*  @remark     Test the functionality of IntervalTree template
 *  @platform   visual studio 2013, windows 10
 ***************************************************************************/
 

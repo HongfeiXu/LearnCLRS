@@ -1,9 +1,9 @@
 /***************************************************************************
-*  @file       OSTree.h
+*  @file       IntervalTree.h
 *  @author     Alex.Xu
 *  @mail       icevmj@gmail.com
 *  @date       7.6 2017
-*  @remark     
+*  @remark     augment red-black trees to support operations on dynamic sets of intervals
 *  @platform   visual studio 2013, windows 10
 ***************************************************************************/
 
