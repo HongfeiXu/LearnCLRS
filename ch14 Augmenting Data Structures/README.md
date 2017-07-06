@@ -4,12 +4,12 @@
 
 ## 14.1 动态顺序统计
 
-[OSTree.h]()  
-[OSTree_test.cpp]()
+[OSTree.h](https://github.com/HongfeiXu/LearnCLRS/blob/master/ch14%20Augmenting%20Data%20Structures/OSTree.h)  
+[OSTree_test.cpp](https://github.com/HongfeiXu/LearnCLRS/blob/master/ch14%20Augmenting%20Data%20Structures/OSTree_test.cpp)
 
 ## 14.2 如何扩张数据
 
 ## 14.3 区间树
 
-[IntervalTree.h]()  
-[IntervalTree_test.cpp]()
+[IntervalTree.h](https://github.com/HongfeiXu/LearnCLRS/blob/master/ch14%20Augmenting%20Data%20Structures/IntervalTree.h)  
+[IntervalTree_test.cpp](https://github.com/HongfeiXu/LearnCLRS/blob/master/ch14%20Augmenting%20Data%20Structures/IntervalTree_test.cpp)
