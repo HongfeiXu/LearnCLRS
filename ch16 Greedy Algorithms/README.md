@@ -54,3 +54,29 @@ Return m[n,w]
 ```
 
 时间复杂度 O(nW)
+
+## 16.3 赫夫曼编码
+
+### 基本思想
+
+采用变长编码，赋予高频字符短码字。使用前缀码（没有任何码字是其他码字的前缀）。与任何字符编码相比，前缀编码可以保证得到最优数据压缩率。  
+算法自底向上地构造出对应最优编码的二叉树 T。使用一个**以属性 freq 为关键字的最小优先队列 Q**，以识别两个频率最低的对象并将其合并。当合并两个对象时，得到的新对象的频率设置为原来两个对象的频率之和。
+
+
+### Pseudocode
+
+输入：C[1..n] n个字符的集合，每个字符 c 是一个对象，具有属性 c.freq 为字符的出现频率。
+
+```c++
+HUFFMAN(C)
+n = |C|
+Q = C
+for i = 1 to n-1
+    allocate a new node z
+    z.left = x = EXTRACT-MIN(Q)
+    z.right = y = EXTRACT-MIN(Q)
+    z.freq = x.freq + y.freq
+    INSERT(Q, z)
+return EXTRACT-MIN(Q)
+```
+
