@@ -70,10 +70,30 @@ void ShowResults(const map<char, string> &results)
 	}
 }
 
+void ReleaseTree(HuffmanNode *root)
+{
+	if(root->lchild != nullptr)
+		ReleaseTreeAux(root->lchild);
+	if(root->rchild != nullptr)
+		ReleaseTreeAux(root->rchild);
+}
+
+void ReleaseTreeAux(HuffmanNode *&root)
+{
+	if (root->lchild != nullptr)
+		ReleaseTreeAux(root->lchild);
+	if (root->rchild != nullptr)
+		ReleaseTreeAux(root->rchild);
+	cout << root->c << ", " << root->frequence << endl;
+	delete root;
+	
+	root = nullptr;
+}
+
 void HuffmanTest()
 {
 	priority_queue<HuffmanNode> q;
-	InitNodes(q, 6);
+	InitNodes(q, 3);
 	//ShowNodes(q);
 	
 	ConstructHuffmanTree(q);
@@ -82,6 +102,7 @@ void HuffmanTest()
 	map<char, string> results;
 	HuffmanCode(root, prefix, results);
 	ShowResults(results);
+	ReleaseTree(root);
 }
 
 /*

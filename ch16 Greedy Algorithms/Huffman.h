@@ -55,6 +55,10 @@ void HuffmanCode(HuffmanNode *root, string &prefix, map<char, string> &results);
 // 输出 HuffmanCode 的结果
 void ShowResults(const map<char, string> &results);
 
+void ReleaseTree(HuffmanNode *root);
+void ReleaseTreeAux(HuffmanNode *&root);  // 传入指针的引用是为了能在函数中修改指针的值
+
+
 // 测试
 void HuffmanTest();
 
