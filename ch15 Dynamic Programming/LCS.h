@@ -4,7 +4,7 @@
 *  @mail       icevmj@gmail.com
 *  @date       8.7 2017
 *  @remark     Longest-common-subsequence problem
-*  @platform   visual studio 2013, windows 10
+*  @platform   visual studio 2015, windows 10
 ***************************************************************************/
 
 #ifndef LCS_H
@@ -22,7 +22,10 @@ using std::vector;
 void LcsLength(const vector<char> &X, const vector<char> &Y, char ** &b, int ** &c);
 void PrintLcs(char ** &b, const vector<char> &X, int X_len, int Y_len);
 
-void LcsTest();
+// 练习 15.4-3 设计 LCS-LENGTH 的带备忘版本，运行时间为 O(mn)
+void LcsLengthMemoi(const vector<char> &X, const vector<char> &Y, char ** &b, char **&c);
+int LcsLengthMemoiAux(const vector<char> &X, const vector<char> &Y, int i, int j, char** &b, char **&c);
 
+void LcsTest();
 
 #endif // !LCS_H
