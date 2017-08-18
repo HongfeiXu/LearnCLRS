@@ -26,6 +26,24 @@
 
 longest-common-subsequence problem 
 
+### 练习 
+
+练习15.4-2 设计伪代码，利用完整的表 c 及原始序列 X 和 Y 来重构 LCS。要求运行时间为 O(m+n)，不能使用表 b。
+
+练习 15.4-3 设计 LCS-LENGTH 的带备忘版本，运行时间为 O(mn)。
+
+练习 15.4-4 说明如何只使用表 c 中 2*min(m, n) 个表项及 O(1) 的额外空间来计算 LCS 的长度。然后说明如何只用 min(m, n) 个表项及 O(1) 的额外空间完成相同的操作。  
+
+练习15.4-5 设计一个 O(n^2) 时间的算法，求一个 n 个数的序列的**最长单调递增子序列**。
+
+**分析**  
+给定一个序列 X=<x1,x2,..,xn>，寻找为了寻找其最长单调递增子序列。  
+step1: sort X=<x1,x2,..,xn> to X'=<x1',x2',..,xn'>，从小到大  
+step2: LCS(X,X') yields the longest monotonically increasing subsequence of X  
+运行时间为：O(n^2) 因为排序时间为 O(nlgn)，LCS 时间为 O(n^2)
+
+
+
 ## 15.5 最优二叉搜索树 
 
 optimal binary search tree 
