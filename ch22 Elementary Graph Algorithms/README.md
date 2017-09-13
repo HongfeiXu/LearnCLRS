@@ -6,6 +6,8 @@
 
 图 `G = (V, E)`，有两种标准表示方法表示。邻接链表（adjacency-list） & 邻接矩阵（adjacency-matrix）。
 
+![Graph](https://github.com/HongfeiXu/LearnCLRS/blob/master/ch22%20Elementary%20Graph%20Algorithms/images/Graph.png?raw=true)
+
 ## 22.2 广度优先搜索
 
 给定图 `G = (V, E)` 和一个可以识别的源结点 `s`，广度优先搜索对图 `G` 中的边进行系统性的搜索来发现**可以从源结点 `s` 到达的所有结点**。  
@@ -18,7 +20,7 @@
 黑色：其所有邻接结点都已经被发现  
 
 下图描述的是BFS在一个样本图上的推进过程  
-![BFS](https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)
+![BFS](https://github.com/HongfeiXu/LearnCLRS/blob/master/ch22%20Elementary%20Graph%20Algorithms/images/BFS.png?raw=true)
 
 
 ### Pseudocode
@@ -51,7 +53,7 @@ while(Q != NULL)
     u.color = BLACK
 ```
 
-Time = O(V + E)
+**Time = O(V + E)**
 
 ### 广度优先树
 
@@ -86,22 +88,99 @@ else
 
 ```c++
 DFS(G)
+for each vertex u in G.V
+    u.color = WHITE
+    u.parent = NIL
+time = 0
+for each vertex u in G.V
+    if u.color == WHITE
+        DFS-VISIT(G, u)
 
-
+DFS-VISIT(G, u)
+time = time + 1  // white vertex u has just been discovered
+u.d = time
+u.color = GRAY
+for each v in G.Adj[u]  // explore edge (u, v)
+    if v.color == WHITE
+        v.parent = u
+        DFS-VISIT(G, v)
+u.color = BLACK  // blacken u
+time = time + 1
+u.f = time
 ```
+
+**Time = BigTheta(V + E)**
+
+下图描述的是DFS在一个样本图上的推进过程  
+![DFS](https://github.com/HongfeiXu/LearnCLRS/blob/master/ch22%20Elementary%20Graph%20Algorithms/images/DFS.png?raw=true)
+
 
 ### 深度优先搜索的性质
 
 括号定理，后代区间的嵌套，白色路径定理
 
-边的分类：（1）树边（2）反向边（3）正向边（4）交叉边
+边的分类：（1）树边（2）后向边（3）正向边（4）横向边
 
-对无向图G进行深度搜索时，G的每一条边，要么是树边，要么是反向边。
-
-
+对无向图`G`进行深度搜索时，每一条边，要么是树边，要么是后向边。
 
 ## 22.4 拓扑排序
 
+对于一个**有向无环图** `G=(V, E)`来说，其**拓扑排序**是`G`中所有结点的一种线性次序，该次序满足如下条件：如果图`G`包含边`(u, v)`，则结点`u`在拓扑排序中处于结点`v`的前面（如果图`G`包含环路，则不可能排除一个线性次序）。
+
+_可以将图的拓扑排序看做是将图的所有结点在一条水平线上排开，图的所有有向边都从左指向右。_
+
+![Topological sort](https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)
+
+### Pseudocode
+
+```
+TOPOLOGICAL-SORT(G)
+call DFS(G) to compute finishing times v.f for each vertex v
+as each vertex is finished, insert it onto the front of a linked list
+return the linked list of vertices
+```
+
+**Time = BigTheta(V + E)**
+
+定理: 一个有向图是无环的，当且仅当对其深度优先搜索不产生后向边。
+
+
+### 练习
+
+练习 22.4-3 给出一个算法，用它来确定一个给定的无向图`G=(V,E)`中是否包含一个回路。
+所给出的算法的运行时间为O(V)，这一时间独立于|E|。
+
+解答：  
+类似于有向图拓扑排序的思路：  
+有向图：如果存在回路，则必存在一个子图，是一个环。因此该子图中所有顶点入度>=1。  
+无向图：如果存在回路，则必存在一个子图，是一个环路。因此环路中所有顶点的度>=2。  
+第一步：删除所有度<=1的顶点及相关的边，并将另外与这些边相关的其它顶点的度减一。  
+第二步：将度数变为1的顶点排入队列，并从该队列中取出一个顶点重复步骤一。  
+如果最后还有未删除顶点，则存在环，否则没有环。  
+
+练习 22.4-5 在有向五环图 `G=(V, E)`上执行拓扑排序还有一种办法，就是重复找入度为 0 的结点，输出该结点，将该结点及其发出的边从图中删除。请解释如何在`O(V+E)`的时间实现这种思想。如果`G`包含环路，将会发生什么情况？
+
+```c++
+TOPOLOGICAL-SORT-v2(G)
+for each vertex u in G
+    if u.indegree == 0
+        Q.push(u)
+while(!Q.empty())
+    v = Q.front()
+    print v
+    Q.pop()
+    delete vertex v
+    for each w in G.Adj[v]
+        delete edge (v,w)
+        w.indegree--
+        if w.indegree == 0
+            Q.push(w)
+```
+
+如果包含环路，则环路将不会被访问。图中结点始终不会被完全删除。否则，图中结点会随着排序的进行逐渐减少直至为空。
+
 ## 22.5 强连通分量
+
+
 
 
