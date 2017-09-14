@@ -184,7 +184,7 @@ while(!Q.empty())
 
 有向图`G=(V,E)`的**强连通分量**是一个最大结点集合`C belong to V`，对于该集合中的任意一对顶点`u`和`v`来说，路径`u->..->v`和路径`v->..->u`同时存在。
 
-![Strongly Connected Components](https://github.com/HongfeiXu/LearnCLRS/blob/459a781cb5887534f050d8649f41094c9aff0731/ch22%20Elementary%20Graph%20Algorithms/images/StronglyConnectedComponents.png?raw=true)
+![Strongly Connected Components](https://github.com/HongfeiXu/LearnCLRS/blob/master/ch22%20Elementary%20Graph%20Algorithms/images/StronglyConnectedComponents.png?raw=true)
 
 我们用于寻找强连通分量的算法需要用到图 G=(V,E) 的转置，G<sup>T</sup>=(V,E<sup>T</sup>)。有趣的是，图 G 和图 G<sup>T</sup> 的强连通分量完全相同。
 
@@ -201,5 +201,5 @@ output the vertices of each tree in the depth-first forest formed in line 3 as a
 
 **Time = BigTheta(V + E)**
 
-[C++实现见 ex22_5_2.h]()
+[C++实现见 ex22_5_2.h](https://github.com/HongfeiXu/LearnCLRS/blob/master/ch22%20Elementary%20Graph%20Algorithms/ex22_5_2.h)
 
