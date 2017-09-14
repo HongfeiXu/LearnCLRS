@@ -81,7 +81,6 @@ else
 时间戳：当顶点v第一次被发现时记录下第一个时间戳`d[v]`，当结束检查v的邻接表时，记录下第二个时间戳`f[v]`。`v`在`d[v]`时刻前是白色的，在时刻`d[v]`和`f[v]`之间是灰色的，在时刻`f[v]`之后是黑色的。
 
 
-
 ### Pseudocode
 
 输入图`G`既可以是无向图，也可以是有向图。变量`time`是一个全局变量，用来计算时间戳。
@@ -129,7 +128,7 @@ u.f = time
 
 _可以将图的拓扑排序看做是将图的所有结点在一条水平线上排开，图的所有有向边都从左指向右。_
 
-![Topological sort](https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)
+![Topological sort](https://github.com/HongfeiXu/LearnCLRS/blob/459a781cb5887534f050d8649f41094c9aff0731/ch22%20Elementary%20Graph%20Algorithms/images/Topological%20sort.png?raw=true)
 
 ### Pseudocode
 
@@ -181,6 +180,26 @@ while(!Q.empty())
 
 ## 22.5 强连通分量
 
+>深度优先搜索的一个经典应用：将有向图分解为强连通分量。许多针对有向图的算法都以此种分解操作开始。在将图分解为强连通分量后，这些算法将分别运行在每个连通分量上，然后根据连通分量之间的连接结构将各个结果组合起来，从而获得最终所需的结果。
+
+有向图`G=(V,E)`的**强连通分量**是一个最大结点集合`C belong to V`，对于该集合中的任意一对顶点`u`和`v`来说，路径`u->..->v`和路径`v->..->u`同时存在。
+
+![Strongly Connected Components](https://github.com/HongfeiXu/LearnCLRS/blob/459a781cb5887534f050d8649f41094c9aff0731/ch22%20Elementary%20Graph%20Algorithms/images/StronglyConnectedComponents.png?raw=true)
+
+我们用于寻找强连通分量的算法需要用到图 G=(V,E) 的转置，G<sup>T</sup>=(V,E<sup>T</sup>)。有趣的是，图 G 和图 G<sup>T</sup> 的强连通分量完全相同。
 
 
+### Pseudocode
+
+```
+STRONGLY-CONNECTED-COMPONENTS(G)
+call DFS(G) to compute finishing times u.f for each vertex u 
+compute GT
+call DFS(GT), but in the main loop of DFS, consider the vertices in order of decreasing u.f (as computed in line 1)
+output the vertices of each tree in the depth-first forest formed in line 3 as a separate strongly connected component
+```
+
+**Time = BigTheta(V + E)**
+
+[C++实现见 ex22_5_2.h]()
 
