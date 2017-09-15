@@ -18,7 +18,10 @@ return A
 
 ## 23.2 Kruskal 算法和 Prim 算法
 
-在 Kruskal 算法中，集合 A 是一个森林，其结点就是给定图的结点。每次加入到集合 A 中的安全边永远是权重最小的连接两个不同分量的边。
+在 **Kruskal** 算法中，集合 A 是一个森林，其结点就是给定图的结点。每次加入到集合 A 中的安全边永远是权重最小的连接两个不同分量的边。
+
+![Kruskal](https://github.com/HongfeiXu/LearnCLRS/blob/master/ch23%20Minimum%20Spanning%20Trees/images/Kruskal.png?raw=true)
+![Kruskal_part2](https://github.com/HongfeiXu/LearnCLRS/blob/master/ch23%20Minimum%20Spanning%20Trees/images/Kruskal_part2.png?raw=true)
 
 ### Pseudocode
 
@@ -42,7 +45,10 @@ for each edge (u, v) in G.E, taken in nondecreasing order by weight
 _对于图 G = (V, E)，Kruskal 算法的运行时间依赖于不相交集合数据结构（即并查集）的实现方式。_
 
 
-在 Prim 算法中，集合 A 则是一棵树。每次加入到集合 A 中的安全边永远是连接 A 和 A 之外某个结点的边中权重最小的边。
+在 **Prim** 算法中，集合 A 则是一棵树。每次加入到集合 A 中的安全边永远是连接 A 和 A 之外某个结点的边中权重最小的边。
+
+![](https://github.com/HongfeiXu/LearnCLRS/blob/master/ch23%20Minimum%20Spanning%20Trees/images/Prim.png?raw=true)
+![](https://github.com/HongfeiXu/LearnCLRS/blob/master/ch23%20Minimum%20Spanning%20Trees/images/Prim_part2.png?raw=true)
 
 ### Pseudocode
 
