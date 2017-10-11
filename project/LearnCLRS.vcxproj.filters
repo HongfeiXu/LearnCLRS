@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\ch12_bstree">
+      <UniqueIdentifier>{a723a802-0ef2-4d86-b9f1-514e5d452930}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ch13_rbtree">
+      <UniqueIdentifier>{02a30d14-450f-49fc-a497-f7a77b0a1513}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ch12_bstree">
+      <UniqueIdentifier>{4d7b117d-dad2-4e91-aa2d-b878b7fa3d2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ch13_rbtree">
+      <UniqueIdentifier>{9876a9ee-3143-4a88-bed5-a87f28e40e41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ch14_augementing">
+      <UniqueIdentifier>{f50e1b3d-b44c-46d7-9713-24d54b34fa4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ch14_augementing">
+      <UniqueIdentifier>{cdbb1ab8-15ac-4609-9a95-69a3c411ff7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ch15_dynamic_programming">
+      <UniqueIdentifier>{b8dc7552-d0f7-4d34-986a-370a36159428}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ch15_dynamic_programming">
+      <UniqueIdentifier>{46881742-899f-4fe1-a1ad-8e97842d6d07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\HelpStruct">
+      <UniqueIdentifier>{217f84b7-7175-47f5-935b-26c3ab11646f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\HelpStruct">
+      <UniqueIdentifier>{21597257-2c3a-4ae2-8f1e-48bc74a72b4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ch16_greedy_algorithms">
+      <UniqueIdentifier>{35517ff3-172f-4d8d-8355-37a6c7b60026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ch16_greedy_algorightms">
+      <UniqueIdentifier>{73f1a615-40e4-4be4-ba7c-86e8b23b0121}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ch06_heapsort">
+      <UniqueIdentifier>{0dd5c329-d34f-4f0b-b1dd-c4bac724160d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ch06_heapsort">
+      <UniqueIdentifier>{cc2fa889-616f-47e5-bc4a-27575532f475}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ch22_elementary_graph_algorithms">
+      <UniqueIdentifier>{58d6f504-b490-4411-8af3-a10e32b76908}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ch22_elementary_graph_algorithms">
+      <UniqueIdentifier>{68157d0c-f841-4d10-bf26-c134c2f911a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ch23_minimum_spanning_trees">
+      <UniqueIdentifier>{6f59de57-4ce9-4254-8b0a-b92ca1f71a07}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\BSTree_test.cpp">
+      <Filter>Source Files\ch12_bstree</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RBTree_test.cpp">
+      <Filter>Source Files\ch13_rbtree</Filter>
+    </ClCompile>
+    <ClCompile Include="src\myUtility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OSTree_test.cpp">
+      <Filter>Source Files\ch14_augementing</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IntervalTree_test.cpp">
+      <Filter>Source Files\ch14_augementing</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CutRod.cpp">
+      <Filter>Source Files\ch15_dynamic_programming</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MatrixChainOrder.cpp">
+      <Filter>Source Files\ch15_dynamic_programming</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Matrix.cpp">
+      <Filter>Source Files\HelpStruct</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LCS.cpp">
+      <Filter>Source Files\ch15_dynamic_programming</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OptimalBst.cpp">
+      <Filter>Source Files\ch15_dynamic_programming</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivitySelector.cpp">
+      <Filter>Source Files\ch16_greedy_algorightms</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Huffman.cpp">
+      <Filter>Source Files\ch16_greedy_algorightms</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Graph.cpp">
+      <Filter>Source Files\ch22_elementary_graph_algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BFS.cpp">
+      <Filter>Source Files\ch22_elementary_graph_algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DFS.cpp">
+      <Filter>Source Files\ch22_elementary_graph_algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ex22_4_3.cpp">
+      <Filter>Source Files\ch22_elementary_graph_algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ex22_4_5.cpp">
+      <Filter>Source Files\ch22_elementary_graph_algorithms</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\BSTree.h">
+      <Filter>Header Files\ch12_bstree</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RBTree.h">
+      <Filter>Header Files\ch13_rbtree</Filter>
+    </ClInclude>
+    <ClInclude Include="src\myUtility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OSTree.h">
+      <Filter>Header Files\ch14_augementing</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IntervalTree.h">
+      <Filter>Header Files\ch14_augementing</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CutRod.h">
+      <Filter>Header Files\ch15_dynamic_programming</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MatrixChainOrder.h">
+      <Filter>Header Files\ch15_dynamic_programming</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Matrix.h">
+      <Filter>Header Files\HelpStruct</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LCS.h">
+      <Filter>Header Files\ch15_dynamic_programming</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OptimalBst.h">
+      <Filter>Header Files\ch15_dynamic_programming</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivtySelector.h">
+      <Filter>Header Files\ch16_greedy_algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Heap.h">
+      <Filter>Header Files\ch06_heapsort</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Huffman.h">
+      <Filter>Header Files\ch16_greedy_algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Graph.h">
+      <Filter>Header Files\ch22_elementary_graph_algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BFS.h">
+      <Filter>Header Files\ch22_elementary_graph_algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DFS.h">
+      <Filter>Header Files\ch22_elementary_graph_algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ex22_4_3.h">
+      <Filter>Header Files\ch22_elementary_graph_algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ex22_4_5.h">
+      <Filter>Header Files\ch22_elementary_graph_algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ex22_5_2.h">
+      <Filter>Header Files\ch22_elementary_graph_algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Kruskal.h">
+      <Filter>Header Files\ch23_minimum_spanning_trees</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DisjointSets.h">
+      <Filter>Header Files\HelpStruct</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Prim.h">
+      <Filter>Header Files\ch23_minimum_spanning_trees</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\GitRepo\LearnCLRS\ch16 Greedy Algorithms\README.md">
+      <Filter>Header Files\ch16_greedy_algorithms</Filter>
+    </None>
+    <None Include="..\..\GitRepo\LearnCLRS\ch15 Dynamic Programming\README.md">
+      <Filter>Header Files\ch15_dynamic_programming</Filter>
+    </None>
+    <None Include="..\..\GitRepo\LearnCLRS\ch22 Elementary Graph Algorithms\README.md">
+      <Filter>Header Files\ch22_elementary_graph_algorithms</Filter>
+    </None>
+    <None Include="..\..\GitRepo\LearnCLRS\ch23 Minimum Spanning Trees\README.md">
+      <Filter>Header Files\ch23_minimum_spanning_trees</Filter>
+    </None>
+    <None Include="..\..\GitRepo\LearnCLRS\ch06 Heapsort\README.md">
+      <Filter>Header Files\ch06_heapsort</Filter>
+    </None>
+  </ItemGroup>
+</Project>
